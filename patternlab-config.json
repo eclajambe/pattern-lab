@@ -93,7 +93,7 @@
   "theme": {
     "color": "light",
     "density": "compact",
-    "layout": "vertical"
+    "layout": "horizontal"
   },
   "uikits": [
     {
