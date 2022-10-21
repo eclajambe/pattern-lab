@@ -1,0 +1,59 @@
+{
+	"cardsBio": [
+		{
+			"name": "Rick Benjamin",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Chief Executive Officer"
+		},
+		{
+			"name": "Linda Cassidy",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief Legal Officer"
+		},
+		{
+			"name": "Alice Conway",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief People & Places Officer"
+		},
+		{
+			"name": "Brian Dahdah",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief Revenue Officer"
+		},
+		{
+			"name": "Elliot Durlach",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief Strategy Officer"
+		},
+		{
+			"name": "David Garfinkel",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Senior Vice President, Corporate Development"
+		},
+		{
+			"name": "Diana Nole",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and General Manager, Healthcare Division"
+		},
+		{
+			"name": "Joe Petro",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief Technology Officer"
+		},
+		{
+			"name": "Mark Sherwood",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Senior Vice President and Chief Information Officer"
+		},
+		{
+			"name": "Dan Tempesta",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and Chief Financial Officer"
+		},
+		{
+			"name": "Robert Weideman",
+			"cardImage": "https://via.placeholder.com/300?text=1:1",
+			"position": "Executive Vice President and General Manager, Enterprise Division"
+		}
+	]
+}

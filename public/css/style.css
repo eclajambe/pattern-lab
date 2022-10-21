@@ -69,7 +69,7 @@
  */
 /**
  * Font Sizing
- */
+ */              
 /**
  * Line Height
  */
@@ -86,6 +86,45 @@
  * Spacing and offsets
  * 1) Used to space grids and body padding
  */
+:root {
+  --spacing: 0.5rem;
+  --xxxl: calc(var(--spacing) * 9);
+  --xxl: calc(var(--spacing) * 6);
+  --xl: calc(var(--spacing) * 4);
+  --lg: calc(var(--spacing) * 3);
+  --md: calc(var(--spacing) * 2);
+  --sm: calc(var(--spacing) * 1.5);
+  --xs: calc(var(--spacing) * 1);
+  --xxs: calc(var(--spacing) * .5);
+  --xxxs: calc(var(--spacing) * .25);
+  --organismVerticalPadding: var(--lg);
+  --organismPadding: var(--xxl) var(--lg);
+  --layoutVerticalPadding: var(--xxl);
+  --layoutPadding: var(--xxl) var(--lg);
+}
+@media screen and (min-width: 73.813em) {
+  :root {
+      --spacing: 1.1713vw;
+      --xxxl: calc(var(--spacing) * 6);
+      --xxl: calc(var(--spacing) * 4);
+      --xl: calc(var(--spacing) * 3);
+      --lg: calc(var(--spacing) * 2);
+      --md: calc(var(--spacing) * 1.5);
+      --sm: calc(var(--spacing) * 1);
+      --xs: calc(var(--spacing) * .75);
+      --xxs: calc(var(--spacing) * .5);
+      --xxxs: calc(var(--spacing) * .25);
+  }
+}
+@media screen and (min-width: 31.25em) {
+  :root {
+    --organismVerticalPadding: var(--xxl);
+    --organismPadding: var(--xxl);
+    --layoutVerticalPadding: calc(var(--xxl) - var(--md));
+    --layoutPadding: var(--xxl) calc(var(--xxl) - var(--md));
+  }
+}
+
 /*------------------------------------*\
     #BORDERS
 \*------------------------------------*/
@@ -205,7 +244,8 @@ body {
   /* 1 */
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.2;
   -webkit-text-size-adjust: 100%;
   /* 1 */
   background-color: #fff;
@@ -244,37 +284,61 @@ ol, ul {
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
-/**
- * Heading 1 base styles
- */
-h1 {
-  font-size: 3rem;
-  font-weight: normal;
-  line-height: 1.2; }
-
-/**
- * Heading 2 base styles
- */
-h2 {
+h1, 
+.type-display-large {
+  font-size: 3.5625rem;
+  font-weight: 300;
+  margin-bottom: var(--md); }
+h2, 
+.type-display-medium  {
+  font-size: 2.8125rem;
+  margin-bottom: var(--md); }
+h3, 
+.type-display-small {
+  font-size: 2.25rem;
+  margin-bottom: var(--md); }  
+h4, 
+.type-headline-large {
   font-size: 2rem;
-  font-weight: normal;
-  line-height: 1.2; }
-
-/**
- * Heading 3 base styles
- */
-h3 {
-  font-size: 1.2rem;
-  font-weight: normal;
-  line-height: 1.2; }
-
-/**
- * Heading 4 base styles
- */
-h4 {
+  margin-bottom: var(--md); }
+h5, 
+.type-headline-medium  {
+  font-size: 1.75rem;
+  margin-bottom: var(--sm); }
+.type-headline-small  {
+  font-size: 1.5rem;
+  margin-bottom: var(--sm); }
+.type-title-large {
+  font-size: 1.375rem;
+  margin-bottom: var(--sm); }
+h6, 
+.type-title-medium {
   font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.2; }
+  font-weight: 600;
+  margin-bottom: var(--sm); }
+.type-title-small {
+  font-size: 0.875rem; 
+  font-weight: 600;
+  margin-bottom: var(--xs); }
+.type-body-large {
+  font-size: 1.125rem;
+  margin-bottom: var(--sm); }
+p, 
+.type-body-medium {
+  font-size: 1rem;
+  margin-bottom: var(--xs); }
+.type-body-small {
+  font-size: 0.75rem;
+  margin-bottom: var(--xs); }
+.type-label-large {
+  font-size: 1.125rem;
+  font-weight: 600; }
+.type-label-medium {
+  font-size: 1rem;
+  font-weight: 600; }
+.type-label-small {
+  font-size: 0.75rem;
+  font-weight: 600; }
 
 /*------------------------------------*\
     #FORMS
@@ -843,6 +907,27 @@ tr {
     background: #f9f9f9; }
 
 /*------------------------------------*\
+    #CARD - BIO
+\*------------------------------------*/
+/**
+ * A collection of text and/or images and/or other smaller content 
+ */
+ .c-card__bio {
+  display: block;
+  padding: 1rem;
+  max-width: 27rem;
+  transition: all 0.15s ease-out; }
+
+.c-card__bio .c-card__body {
+  text-align: center; }
+
+.c-card__bio .c-card__media {
+  padding: var(--lg); }
+
+.c-card__bio .c-card__media img {
+  border-radius: 100%; }
+
+/*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
 /**
@@ -1108,6 +1193,18 @@ tr {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+ * Grid of things
+ */
+ .c-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
 
 /*------------------------------------*\
     #SECTION
