@@ -1,13 +1,7 @@
-<div class="o-grid">
-  <div class="container">
-
-        <div class="c-grid">
-            {{#each cardsBio }}
-            <div class="c-card-list__item">
-                {{> molecules-card-bio cardImg=logoImg }}
-            </div>
-            {{/ each }}
-        </div>
-
-  </div>
+<div class="organism o--grid {{styleModifier}}">
+  {{#each cardsBio }}
+    <div class="o--grid--item">
+      {{> molecules-card-bio cardImg=logoImg }}
+    </div>
+  {{/ each }}
 </div>

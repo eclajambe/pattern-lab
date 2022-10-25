@@ -1,19 +1,19 @@
-<a href="{{ url }}" class="c-card__bio {{ styleModifier }}">
+<a href="{{ url }}" class="molecule m--card--bio {{ styleModifier }}">
 
-	<div class="c-card__header">
+	<div class="m--card--header">
         {{#if cardImage }}
-		<div class="c-card__media">
+		<div class="m--card--media">
 			{{> atoms-card-image src=cardImage }}
 		</div>
 		{{/ if }}
 	</div>
 
-	<div class="c-card__body">
-		<h4 class="c-card__title type-title-medium">{{ name }}</h4>
-		{{#if position}}<p class="c-card__excerpt">{{ position }}</p>{{/ if }}
-	</div><!-- end c-card__body -->
+	<div class="m--card--body">
+		<h4 class="m--card--title type-title-medium">{{ name }}</h4>
+		{{#if position}}<p class="m--card--excerpt">{{ position }}</p>{{/ if }}
+	</div><!-- end m--card--body -->
 
-	<div class="c-card__footer">
+	<div class="m--card--footer">
         {{#if cta }}
 			{{> molecules-button buttonText=cta }}
         {{/ if }}

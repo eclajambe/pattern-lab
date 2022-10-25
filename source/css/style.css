@@ -52,6 +52,29 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
+body {
+  /* Primary */
+  --medium-blue: #0073EA;
+  --dark-blue: #141380;
+  --purple: #75178C;
+  /* Secondary */
+  --light-blue: #2DC6D6;
+  --magenta: #DB28A5;
+  --green: #8FCE00;
+  /* Neutrals */
+  --white: #FFFFFF;
+  --gray-10: #E5EBEB;
+  --gray-20: #C4CACA;
+  --gray-50: #B0B6B6;
+  --gray-80: #626D6F;
+  --gray-90: #333333;
+  --black: #000000;
+  /* UI */
+  --ui-blue: #285CE6;
+  /* Gradients */
+  --medium-blue-to-dark-blue: linear-gradient(180deg, var(--medium-blue) 0%, var(--dark-blue) 100%); 
+  --medium-blue-to-purple: linear-gradient(180deg, var(--medium-blue) 0%, var(--purple) 100%); 
+}
 /**
  * Neutral Colors
  * 1) Neutral colors are grayscale values used throughout the UI
@@ -61,6 +84,43 @@
  * 1) Utility colors are colors used to provide feedback, such as alert messages,
  *    form validation, etc.
  */
+body,
+body .t--default {
+  --color: var(--black);
+  --eyebrowColor: var(--gray-80);
+  --headlineColor: var(--black);
+  --headlineLinkColor: var(--ui-blue);
+}
+body .t--light {
+  --color: var(--black);
+  --eyebrowColor: var(--gray-80);
+  --headlineColor: var(--black);
+  --headlineLinkColor: var(--ui-blue);  
+}
+body .t--dark,
+body .t--gradient {
+  --color: var(--white);
+  --eyebrowColor: var(--white);
+  --headlineColor: var(--white);
+  --headlineLinkColor: var(--ui-blue);  
+}
+body,
+body .t--default {
+  --backgroundColor: var(--white); }
+body .t--light {
+  --backgroundColor: var(--gray-10); }
+body .t--dark {
+  --backgroundColor: var(--dark-blue); }
+body .t--gradient {
+  --backgroundColor: var(--medium-blue-to-dark-blue); }
+
+.brick,
+.organism {
+  background: var(--backgroundColor); }
+.brick {
+  padding: var(--layoutPadding); }
+.brick h1, .brick h2, .brick h3, .brick h4, .brick h5, .brick h6, .brick p {
+  color: var(--color); }
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
@@ -124,6 +184,9 @@
     --layoutPadding: var(--xxl) calc(var(--xxl) - var(--md));
   }
 }
+
+.brick--type--macro {
+  padding: var(--layoutPadding); }
 
 /*------------------------------------*\
     #BORDERS
@@ -912,19 +975,19 @@ tr {
 /**
  * A collection of text and/or images and/or other smaller content 
  */
- .c-card__bio {
+ .m--card--bio {
   display: block;
   padding: 1rem;
-  max-width: 27rem;
   transition: all 0.15s ease-out; }
 
-.c-card__bio .c-card__body {
+.m--card--bio .m--card--body {
   text-align: center; }
 
-.c-card__bio .c-card__media {
-  padding: var(--lg); }
+.m--card--bio .m--card--media {
+  text-align: center;
+  margin-bottom: var(--sm); }
 
-.c-card__bio .c-card__media img {
+.m--card--bio .m--card--media img {
   border-radius: 100%; }
 
 /*------------------------------------*\
@@ -1041,9 +1104,12 @@ tr {
  * 1) Caps the width of the content to the maximum width
  *    and centers the container
  */
-.l-container {
-  max-width: 60rem;
-  margin: 0 auto; }
+.brick > .container {
+  max-width: 96.625em;
+  margin: 0 auto; 
+  clear: both;
+  display: flex;
+  flex-direction: column; }
 
 .c-footer-nav {
   display: flex; }
@@ -1200,10 +1266,15 @@ tr {
 /**
  * Grid of things
  */
- .c-grid {
+ .o--grid {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+.o--grid.three-column {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr)); }  
 
 
 /*------------------------------------*\
